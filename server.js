@@ -1,5 +1,6 @@
 console.log("Staring the server...");
 const express = require('express');
+const res = require('express/lib/response');
 const app = express();
 const http = require("http");
 
@@ -14,12 +15,13 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4: Routing code
-app.get("/hello", (req, res) => {
-    res.end("<h1>Hello from the server</h1>");
+app.post("/create-item", function(req, res) {
+    console.log(req.body);
+    res.json({ message: "Item created successfully" });
 });
 
-app.get("/gift", (req, res) => {
-    res.end("<h1>You are in Gift section</h1>");
+app.get("/", function(req, res) {
+    res.render("purchase");
 });
 
 const server = http.createServer(app);
