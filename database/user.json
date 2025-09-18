@@ -1,0 +1,20 @@
+{
+    "name": "John Doe",
+    "profession": "Software Engineer",
+    "age": 22,
+    "residence": "S.Korea",
+    "address": "S.Korea, Incheon ",
+    "languages": ["Uzbek", "Korean", "English", "Russian"],
+    "skills": ["Html", "Css", "Js", "NodeJS", "Python", "Flutter"],
+    "extra_skills": ["Bootstrap, Materialize", "Styling, Sass", "Django, Flask", "GIT Knowledge"],
+    "work_place": "IT Company",
+    "service_desc": "I am available for freelance work. Connect with me via and call in to my account.",
+    "about_me": "I am a Software Engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success. Well-versed in technology and writing code to create systems that are reliable and user-friendly. Skilled leader who has the proven ability to motivate, educate, and manage a team of professionals to build software programs and effectively track changes.",
+    "city": "Jizzakh",
+    "title": ["Flower", "Seedlings", "Gardener", "Old", "New"],
+    "flower_desc": ["What is a Flower?", "What is a Seedling?", "Who is a Gardener?"],
+    "flower_name": ["Tulip", "Daffodil", "Poppy", "Sunflower", "Bluebell", "Rose", "Snowdrop", "Cherry Blossom"],
+    "flower_price": ["15$", "35$", "30$", "22$", "19$"],
+    "famous_words": ["World is Beautiful with Flowers"],
+    "famous_name": ["John Doe"]
+  }
