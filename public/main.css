@@ -4,7 +4,7 @@
     height: 100%;
     position: relative;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: center;
     background-color: #e5e5e5;
 }
@@ -17,7 +17,6 @@
     flex-direction: row;
     align-items: center;
     margin-top: 2px;
-    background-color: #f7f6b9;
 }
 
 .main_frame .left_frame {
@@ -37,7 +36,6 @@
     flex-direction: column;
     margin-left: 30px;
     margin-right: 27px;
-    background-color: rgb(203, 25, 25);
 }
 
 .main_frame .right_frame {
@@ -79,7 +77,6 @@
     height: 126px;
     width: 221px;
     margin-left: 44px;
-    background-color: aqua;
 }
 
 .main_frame .left_frame .left_3 {
@@ -88,7 +85,6 @@
     width: 220px;
     margin-left: 45px;
     margin-top: 25px;
-    background-color: aqua
 }
 
 .main_frame .left_frame .left_4 {
@@ -97,16 +93,14 @@
     width: 220px;
     margin-left: 45px;
     margin-top: 25px;
-    background-color: aqua;
 }
 
 .main_frame .left_frame .left_5 {
     position: relative;
     height: 148px;
     width: 186px;
-    margin-left: 45px;  
+    margin-left: 45px;
     margin-top: 25px;
-    background-color: aqua;
 }
 
 /* left insides 1 */
@@ -125,8 +119,8 @@
     width: 66.63px;
     height: 20.9px;
     margin-bottom: 6.65px;
-    font-family: sans-serif;
-    font-style: normal ;
+    font-family: "Inter";
+    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 123.6%;
@@ -142,7 +136,7 @@
     width: 147.84px;
     height: 25.65px;
     font-family: sans-serif;
-    font-style: normal ;
+    font-style: normal;
     font-weight: normal;
     color: #767676;
     font-size: 15px;
@@ -154,6 +148,7 @@
     text-transform: capitalize;
     font-feature-settings: "calt" off "kern" off;
 }
+
 .main_frame .left_frame .left_1 .left-icons {
     position: relative;
     display: flex;
@@ -183,4 +178,288 @@
     right: 27.08%;
     left: 29.17%;
     margin-top: 5.86px;
+}
+
+.left_2-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.left_2-1_start {
+    background-color: #ffb400;
+}
+
+/* left insides lagnguages... 3 and for 4  skills */
+
+.intro_left {
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    line-height: 123.6%;
+}
+
+.percentages {
+    position: relative;
+    max-width: 220px;
+    height: 2px;
+    margin-bottom: 2px;
+    margin-top: 3px;
+    border: 1.5px solid wheat;
+    border-radius: 20%;
+
+}
+
+.percentages_in {
+    border: 1.5px solid #ffb400;
+}
+
+.left_3_1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    margin-top: 12px;
+    font-size: 16px;
+    color: grey;
+}
+
+
+/* left insides more skills... 5 */
+
+.check {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+.left_5_1 {
+    display: flex;
+    flex-direction: row;
+    line-height: 24px;
+    font-size: 16px;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: grey;
+}
+
+
+/* starting middle */
+
+
+.midd_frame .banners {
+    position: relative;
+    width: 971px;
+    height: 454.328px;
+    background: var(--White, #FFF);
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.banner_text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 99.15px;
+    margin-left: 56.07px
+}
+
+.text_main {
+    width: 499.514px;
+    height: 116.744px;
+    color: var(--Black, #2B2B2B);
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 123.6%;
+    /* 59.328px */
+    margin-bottom: 17.11px;
+}
+
+.text_des {
+    width: 424.437px;
+    height: 85.612px;
+    color: var(--Paragraph-Font, #767676);
+    font-kerning: none;
+    font-feature-settings: 'calt' off;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    text-transform: capitalize;
+    margin-bottom: 22.78px;
+}
+
+.main_frame .midd_top-left-btn {
+    display: flex;
+    border: none;
+    padding: 16px 32px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: var(--Yellow, #FFB400);
+    margin-bottom: 61.93px;
+}
+
+/* image side */
+.banner_image {
+    width: 326.055px;
+    height: 446.633px;
+    margin-top: 16.46px;
+    margin-right: 61.65px;
+}
+
+
+
+/* services */
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 970px;
+    height: 653px;
+    margin-top: 143px;
+}
+
+.services_intro {
+    display: flex;
+    font-family: "Inter";
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum */
+.text_font {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    width: 200px;
+    height: 68px;
+}
+
+.service_des {
+    margin-bottom: 20px;
+    margin-top: 15px;
+    width: 420px;
+    font-size: 14px;
+    font-family: "Inter";
+    color: rgb(146, 145, 145);
+    font-weight: 200;
+    text-align: center;
+
+}
+
+/* services cards */
+
+.item_icons {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    width: 68px;
+    height: 68px;
+}
+
+.services_h1 {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.services_p {
+    margin: 5px;
+    font-size: 12px;
+    font-family: "Inter";
+    color: rgb(149, 97, 97);
+}
+
+.services_p_last {
+    margin: 12px;
+    width: 240px;
+    font-size: 12px;
+    font-family: "Inter";
+    color: rgb(90, 28, 28);
+}
+
+
+.services_cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.services_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 310px;
+    height: 225px;
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+}
+
+
+/* right side codes */
+
+.top_alone {
+    margin-bottom: 140px;
+}
+
+.right_item {
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.right_icon {
+    margin-top: 13px;
+    margin-bottom: 13px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: drop-shadow(0 3px 3px rgb(208, 208, 208));
+    background-color: rgb(252, 252, 252);
+}
+
+.icon_itself {
+    position: relative;
+    left: 24%;
+    top: 10%;
+    margin-top: 5.5px;
+    width: 22px;
+    height: 22px;
+}
+
+.bb {
+    background-color: #ffb400;
+}
+
+.mm {
+    background-color: white;
+}
+
+.services_h1 {
+    font-size: 14px;
+    width: 240px;
+    text-align: center;
 }
