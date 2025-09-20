@@ -254,9 +254,6 @@
 }
 
 
-/* starting middle */
-
-
 .midd_frame .banners {
     position: relative;
     width: 971px;
@@ -265,7 +262,6 @@
     display: flex;
     justify-content: space-between;
 }
-
 
 .banner_text {
     display: flex;
