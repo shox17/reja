@@ -81,14 +81,34 @@
 // ikkinchi parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.
 // MASALAN countLetter("e", "engineer") 3ni return qiladi.
 
-function countLetter(letter, word) {
+// function countLetter(letter, word) {
+//     let count = 0;
+//     for (let char of word) {
+//         if (char === letter) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+// console.log(countLetter("e", "engineer")); // 3
+
+// ======================================================
+
+// B - TASK:
+
+//Shunday function tuzing, u 1ta string parametrga ega bolsin, 
+//hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+//MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
+function countDigits(str) {
     let count = 0;
-    for (let char of word) {
-        if (char === letter) {
+    for (let ind in str) {
+        if (str[ind] >= '0' && str[ind] <= '9') {
             count++;
         }
     }
     return count;
 }
 
-console.log(countLetter("e", "engineer")); // 3
+console.log(countDigits("ad2a54y79wet0sfgb9"));  // 7 

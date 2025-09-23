@@ -34,13 +34,13 @@ app.get("/author", function(req, res) {
     res.render("author", { user: user });
 });
 app.get("/", function(req, res) {
-    res.render("purchase");
+    res.render("reja");
 });
 
 const server = http.createServer(app);
 const PORT = 3000;
 
 server.listen(PORT, function() {
-    console.log("Server is running successfully on PORT", PORT);
+    console.log(`Server is running successfully on port:  ${PORT}, http://localhost:${PORT}`);
 });
 
