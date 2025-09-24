@@ -1,46 +1,24 @@
-console.log("Staring the server...");
-const express = require('express');
-const res = require('express/lib/response');
-const app = express();
 const http = require("http");
-const fs = require("fs");
+const mongodb = require("mongodb");
 
-let user;
-fs.readFile("database/user.json", "utf-8", (err, data) => {
-    if (err) {
-        console.log("ERROR: ", err);
-    } else {
-        user = JSON.parse(data);
-    }
-});    
+let db;
+let connectionString = "mongodb+srv://shoxrux17:17052003Sh@cluster0.4bbdk3d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
-// 1: Entering code
-app.use(express.static('public'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+mongodb.connect(
+    connectionString,
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    (error, client) => {
+        if (error) {
+            console.log('Error on database connection:', error);
+        } else {
+            const PORT = 3000
+            console.log('Mongodb Database:connected successfully');
+            module.exports = client;
 
-// 2: Session code
-// 3: Views code
-app.set("views", "views");
-app.set("view engine", "ejs");
-
-// 4: Routing code
-app.post("/create-item", function(req, res) {
-    console.log(req.body);
-    res.json({ message: "Item created successfully" });
-});
-
-app.get("/author", function(req, res) {
-    res.render("author", { user: user });
-});
-app.get("/", function(req, res) {
-    res.render("reja");
-});
-
-const server = http.createServer(app);
-const PORT = 3000;
-
-server.listen(PORT, function() {
-    console.log(`Server is running successfully on port:  ${PORT}, http://localhost:${PORT}`);
-});
-
+            const app = require("./app");
+            const server = http.createServer(app);
+            server.listen(PORT, function () {
+                console.log(`Server is running successfully on port:  ${PORT}, http://localhost:${PORT}`);
+            });
+        }
+    })
