@@ -1,4 +1,5 @@
 console.log("Starting the server...");
+const e = require('express');
 const express = require('express');
 const res = require('express/lib/response');
 const app = express();
@@ -14,7 +15,7 @@ fs.readFile("database/user.json", "utf-8", (err, data) => {
     } else {
         user = JSON.parse(data);
     }
-});    
+});
 
 // 1: Entering code
 app.use(express.static('public'));
@@ -27,16 +28,33 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4: Routing code
-app.post("/create-item", function(req, res) {
-    console.log(req.body);
-    res.json({ message: "Item created successfully" });
+app.post("/create-item", function (req, res) {
+    console.log("user entered /create-item route");
+    const new_reja = req.body.reja;
+    db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
+        if (err) {
+            console.log(err);
+            res.end("Error occurred while saving the plan.");
+        } else {
+            res.end("Successfully saved the plan.");
+        }
+    });
 });
 
-app.get("/author", function(req, res) {
+app.get("/author", function (req, res) {
     res.render("author", { user: user });
 });
-app.get("/", function(req, res) {
-    res.render("reja");
+app.get("/", function (req, res) {
+    console.log("user entered / route");
+    db.collection("plans")
+        .find()
+        .toArray((err, data) => {
+            if (err) {
+                console.log(err);
+            } else {
+                res.render("reja", { items: data });
+            }
+        });
 });
 
 
