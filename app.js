@@ -1,12 +1,11 @@
 console.log("Starting the server...");
-const e = require('express');
 const express = require('express');
-const res = require('express/lib/response');
 const app = express();
 const fs = require("fs");
 
 // MongoDB call
-const db = require("./server").db();
+const client = require("./server");
+const db = client.db(); // DB object
 
 let user;
 fs.readFile("database/user.json", "utf-8", (err, data) => {
@@ -32,12 +31,8 @@ app.post("/create-item", function (req, res) {
     console.log("user entered /create-item route");
     const new_reja = req.body.reja;
     db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-        if (err) {
-            console.log(err);
-            res.end("Error occurred while saving the plan.");
-        } else {
-            res.end("Successfully saved the plan.");
-        }
+       console.log(data.ops);
+       res.json(data.ops[0]); 
     });
 });
 
