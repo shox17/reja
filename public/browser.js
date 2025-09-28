@@ -30,3 +30,22 @@ document
                 console.log("Please try again later.");
             });
     });
+
+document.addEventListener("click", function (e) {
+    // Delete button operations
+    if (e.target.classList.contains("delete-me")) {
+        if (confirm("Are you sure you want to delete this item?")) {
+            axios
+                .post("/delete-item", { id: e.target.getAttribute("data-id") })
+                .then((response) => {
+                    console.log(response.data);
+                    e.target.parentElement.parentElement.remove();
+                })
+                .catch((err) => {
+                    console.log("Please try again later.");
+                });
+        }
+    }
+    // Edit button operations
+    if (e.target.classList.contains("edit-me")) {}
+});

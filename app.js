@@ -6,6 +6,7 @@ const fs = require("fs");
 // MongoDB call
 const client = require("./server");
 const db = client.db(); // DB object
+const mongodb = require("mongodb");
 
 let user;
 fs.readFile("database/user.json", "utf-8", (err, data) => {
@@ -31,8 +32,15 @@ app.post("/create-item", function (req, res) {
     console.log("user entered /create-item route");
     const new_reja = req.body.reja;
     db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-       console.log(data.ops);
-       res.json(data.ops[0]); 
+        console.log(data.ops);
+        res.json(data.ops[0]);
+    });
+});
+
+app.post("/delete-item", (req, res) => {
+    const id = req.body.id;
+    db.collection("plans").deleteOne({ _id: new mongodb.ObjectId(id) }, (err, result) => {
+        res.json({ state: "success" });
     });
 });
 
