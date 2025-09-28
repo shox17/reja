@@ -40,8 +40,28 @@ app.post("/create-item", function (req, res) {
 app.post("/delete-item", (req, res) => {
     const id = req.body.id;
     db.collection("plans").deleteOne({ _id: new mongodb.ObjectId(id) }, (err, result) => {
-        res.json({ state: "success" });
+        res.json({ state: "plan deleted" });
     });
+});
+
+app.post("/edit-item", (req, res) => {
+    const data = req.body;
+    console.log(data);
+    db.collection("plans").findOneAndUpdate(
+        { _id: new mongodb.ObjectId(data.id) },
+        { $set: { reja: data.new_Input } },
+        function(err, data) {
+            res.json({ state: "plan edited" });
+        }
+    );
+});
+
+app.post("/delete-all", (req, res) => {
+    if(req.body.delete_all) {
+        db.collection("plans").deleteMany({}, (err, result) => {
+            res.json({ state: "all plans deleted" });
+        });
+    }
 });
 
 app.get("/author", function (req, res) {
