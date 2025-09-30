@@ -117,53 +117,68 @@
 
 // C - TASK:
 
-class Shop {
-  constructor(bread, noodles, cola) {
-    this.products = {
-      bread: bread,
-      noodles: noodles,
-      cola: cola,
-    };
-  }
+// class Shop {
+//   constructor(bread, noodles, cola) {
+//     this.products = {
+//       bread: bread,
+//       noodles: noodles,
+//       cola: cola,
+//     };
+//   }
 
-  // Helper method to get the current time
-  getCurrentTime() {
-    const now = new Date();
-    const hours = now.getHours();
-    const minutes = now.getMinutes().toString().padStart(2, "0");
-    return `${hours}:${minutes}`;
-  }
+//   // Helper method to get the current time
+//   getCurrentTime() {
+//     const now = new Date();
+//     const hours = now.getHours();
+//     const minutes = now.getMinutes().toString().padStart(2, "0");
+//     return `${hours}:${minutes}`;
+//   }
 
-  // Check current stock
-  checkStock() {
-    const time = this.getCurrentTime();
-    console.log(
-      `At ${time}, stock is: ${this.products.bread} bread, ${this.products.noodles} noodles, ${this.products.cola} cola.`
-    );
-  }
+//   // Check current stock
+//   checkStock() {
+//     const time = this.getCurrentTime();
+//     console.log(
+//       `At ${time}, stock is: ${this.products.bread} bread, ${this.products.noodles} noodles, ${this.products.cola} cola.`
+//     );
+//   }
 
-  // Sell a product
-  sell(product, quantity) {
-    const time = this.getCurrentTime();
-    if (this.products[product] >= quantity) {
-      this.products[product] -= quantity;
-      console.log(`At ${time}, sold ${quantity} ${product}.`);
-    } else {
-      console.log(`At ${time}, not enough ${product} in stock!`);
-    }
-  }
+//   // Sell a product
+//   sell(product, quantity) {
+//     const time = this.getCurrentTime();
+//     if (this.products[product] >= quantity) {
+//       this.products[product] -= quantity;
+//       console.log(`At ${time}, sold ${quantity} ${product}.`);
+//     } else {
+//       console.log(`At ${time}, not enough ${product} in stock!`);
+//     }
+//   }
 
-  // Receive a product
-  receive(product, quantity) {
-    const time = this.getCurrentTime();
-    this.products[product] += quantity;
-    console.log(`At ${time}, received ${quantity} ${product}.`);
-  }
+//   // Receive a product
+//   receive(product, quantity) {
+//     const time = this.getCurrentTime();
+//     this.products[product] += quantity;
+//     console.log(`At ${time}, received ${quantity} ${product}.`);
+//   }
+// }
+
+// // Example usage:
+// const shop = new Shop(4, 5, 2); 
+// shop.checkStock(); 
+// shop.sell("bread", 3); 
+// shop.receive("cola", 4); 
+// shop.checkStock(); 
+
+// ======================================================
+
+// D - TASK:
+
+// Shunday function tuzing, u 2ta string parametr ega bolsin, 
+// hamda agar har ikkala string bir hil harflardan iborat bolsa 
+// true aks holda false qaytarsin
+
+function checkContent(str1, str2) {
+  return str1.split('').sort().join('') 
+  === str2.split('').sort().join('');
 }
 
-// Example usage:
-const shop = new Shop(4, 5, 2); 
-shop.checkStock(); 
-shop.sell("bread", 3); 
-shop.receive("cola", 4); 
-shop.checkStock(); 
+console.log(checkContent("mitgroup", "gmtiprou")); // true
