@@ -176,9 +176,23 @@
 // hamda agar har ikkala string bir hil harflardan iborat bolsa 
 // true aks holda false qaytarsin
 
-function checkContent(str1, str2) {
-  return str1.split('').sort().join('') 
-  === str2.split('').sort().join('');
+// function checkContent(str1, str2) {
+//   return str1.split('').sort().join('') 
+//   === str2.split('').sort().join('');
+// }
+
+// console.log(checkContent("mitgroup", "gmtiprou")); // true
+
+// =======================================================
+
+// E - TASK:
+
+// Shunday function tuzing, u bitta string argumentni 
+// qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+function getReverse(str) {
+  return str.split('').reverse().join('');
 }
 
-console.log(checkContent("mitgroup", "gmtiprou")); // true
+console.log(getReverse("hello")); // "olleh"
