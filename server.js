@@ -10,7 +10,7 @@ mongodb.connect(
         if (error) {
             console.log('Error on database connection:', error);
         } else {
-            const PORT = process.env.PORT || 3000;
+            const PORT = 4001;
             console.log('Mongodb Database:connected successfully');
             module.exports = client;
 
