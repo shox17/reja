@@ -191,8 +191,31 @@
 // qabul qilib osha stringni teskari qilib return qilsin.
 // MASALAN: getReverse("hello") return qilsin "olleh"
 
-function getReverse(str) {
-  return str.split('').reverse().join('');
+// function getReverse(str) {
+//   return str.split('').reverse().join('');
+// }
+
+// console.log(getReverse("hello")); // "olleh"
+
+// =======================================================
+
+// F - TASK:
+
+// Yagona string argumentga ega findDoublers nomli function tuzing
+// Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+// true yokida false natija qaytarsin.
+
+// MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+
+function findDoublers(str) {
+  let charSet = new Set();
+  for (let char of str) {
+    if (charSet.has(char)) {
+      return true; 
+    }
+    charSet.add(char);
+  }
+  return false; 
 }
 
-console.log(getReverse("hello")); // "olleh"
+console.log(findDoublers("hello")); // true
